@@ -1,0 +1,31 @@
+{% extends 'network/layout.html' %}
+
+{% block body %}
+<div id="body">
+    <div id="user" style="display: none;">{{user}}</div>
+    <div id="user-id" style="display: none;">{{user.id}}</div>
+    <div id="page-user-id" style="display: none;">{{id}}</div>
+    <h1 id="username">{{username}}</h1>
+    <hr>
+    <h3><span id="followers">{{followers_num}}</span> <span style="color: gray;">Followers</span></h3>
+    <h3>{{followings_num}} <span style="color: gray;">Followings</span></h3>
+    <h3>{{posts_count}} <span style="color: gray;">Posts</span></h3>
+    <hr>
+    {% if user.username != username %}
+        <button id="follow-btn" class="btn btn-primary" style="display: none">Follow</button>
+        <button id="unfollow-btn" class="btn btn-outline-primary" style="display: none">Unfollow</button>
+    {% endif %}
+
+    <div id="posts">
+    </div>
+    <div id="page-btns">
+        <div class="row">
+            <button id="previous-btn" class="btn btn-link col-1">previous</button>
+            <span class="col-10"></span>
+            <button id="next-btn" class="btn btn-link col-1">next</button>
+        </div>
+    </div>
+
+    <script src="/static/network/user.js"></script>
+</div>
+{% endblock %}

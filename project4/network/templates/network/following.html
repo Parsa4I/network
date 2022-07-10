@@ -1,0 +1,20 @@
+{% extends 'network/layout.html' %}
+
+{% block body %}
+<div id="body">
+    <div id="user" style="display: none;">{{user}}</div>
+    <div id="user-id" style="display: none;">{{user_id}}</div>
+    <h1>Following</h1>
+    <div id="posts">
+    </div>
+    <div id="page-btns">
+        <div class="row">
+            <button id="previous-btn" class="btn btn-link col-1">previous</button>
+            <span class="col-10"></span>
+            <button id="next-btn" class="btn btn-link col-1">next</button>
+        </div>
+    </div>
+    <script src="/static/network/following.js"></script>
+</div>
+
+{% endblock%}

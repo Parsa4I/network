@@ -1,0 +1,31 @@
+{% extends 'network/layout.html' %}
+
+{% block body %}
+<div id="body">
+    <div id="user" style="display: none;">{{user}}</div>
+    <h1>All Posts</h1>
+
+    {% if user.is_authenticated %}
+    <div id="new-post-form">
+        <h4>New Post</h4>
+        <form action="{% url 'newpost' %}" method="post">
+            {% csrf_token %}
+            <textarea class="col-12" rows="5" name="body"></textarea>
+            <input type="submit" class="btn btn-outline-primary m-1" value="Post">
+        </form>
+    </div>
+    {% endif %}
+
+    <div id="posts">
+    </div>
+    <div id="page-btns">
+        <div class="row">
+            <button id="previous-btn" class="btn btn-link col-1">previous</button>
+            <span class="col-10"></span>
+            <button id="next-btn" class="btn btn-link col-1">next</button>
+        </div>
+    </div>
+
+    <script src="/static/network/index.js"></script>
+</div>
+{% endblock %}

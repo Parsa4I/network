@@ -1,0 +1,40 @@
+#body {
+    margin: 15px;
+}
+
+#new-post-form {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 50px;
+}
+
+#posts, #page-btns {
+    margin: 20px 200px;
+}
+
+.post {
+    border: 1px solid lightgray;
+    background-color: rgb(235, 235, 235);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 50px;
+}
+
+.edit-textarea {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+    #new-post-form {
+        margin: 10px 0;
+    }
+
+    #posts {
+        margin: 20px 0;
+    }
+
+    .post {
+        margin: 10px 0;
+    }
+}
